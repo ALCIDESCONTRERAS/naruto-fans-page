@@ -1,7 +1,3 @@
-interface Image {
-	image: string;
-}
-
 interface Personal {
 	birthdate?: string;
 	sex?: string;
@@ -9,9 +5,15 @@ interface Personal {
 	affiliation?: string;
 }
 
-export interface Characters {
+
+
+export interface Character {
 	id: number;
 	name: string;
-	image: Image[];
+	images: string[];
 	personal: Personal
+}
+
+export interface Characters {
+	characters : Character[]
 }
