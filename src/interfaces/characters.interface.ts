@@ -5,8 +5,6 @@ interface Personal {
 	affiliation?: string;
 }
 
-
-
 export interface Character {
 	id: number;
 	name: string;

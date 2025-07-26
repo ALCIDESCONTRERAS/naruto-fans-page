@@ -1,10 +1,10 @@
 import axios from "axios";
-import { URL_GET_CHARACTERS } from "./urlsApi/urlApiNaruto";
 import type { Characters } from "../interfaces/characters.interface";
+import { URL_CHARACTERS } from "./urlsApi/urlApiNaruto";
 
 export const getCharacters = async (): Promise<Characters | undefined> => {
   try {
-    const res = await axios.get<Characters>(URL_GET_CHARACTERS);
+    const res = await axios.get<Characters>(URL_CHARACTERS);
     return res.data;
   } catch (error) {
     console.error(error);
