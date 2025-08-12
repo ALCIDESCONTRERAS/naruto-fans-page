@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import type { Character } from "../interfaces/characters.interface";
-import { getCharacters } from "../services/narutoApi";
+import type { Character } from "../../interfaces/characters.interface";
+import { getCharacters } from "../../services/narutoApi";
 
 
-function Home() {
+function HomePage() {
   const [charactersApi, setCharactersApi] = useState<Character[] | null>(null);
 
   const getCharactersApi = async () => {
@@ -37,4 +37,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;
