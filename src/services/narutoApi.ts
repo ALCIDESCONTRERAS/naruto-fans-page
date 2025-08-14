@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Characters } from "../interfaces/characters.interface";
+import type { Characters } from "../interfaces/Character.interface";
 import { URL_CHARACTERS } from "./urlsApi/urlApiNaruto";
 
 export const getCharacters = async (): Promise<Characters | undefined> => {

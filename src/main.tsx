@@ -4,13 +4,16 @@ import "./style/index.css";
 import { BrowserRouter } from "react-router";
 import AppRoutes from "./routes";
 import { AuthProvider } from "./context/auth/AuthProvider";
+import { NarutoProvider } from "./context/naruto/NarutoProvider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <AppRoutes />
-      </AuthProvider>
+      <NarutoProvider>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </NarutoProvider>
     </BrowserRouter>
   </StrictMode>
 );

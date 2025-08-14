@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { User } from "../../interfaces/user.interface";
+import type { User } from "../../interfaces/User.interface";
 import { AuthContext } from "./AuthContext";
 
 interface Props {

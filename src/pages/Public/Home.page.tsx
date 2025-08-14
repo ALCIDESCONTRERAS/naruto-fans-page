@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import type { Character } from "../../interfaces/characters.interface";
+import type { Character } from "../../interfaces/Character.interface";
 import { getCharacters } from "../../services/narutoApi";
-
 
 function HomePage() {
   const [charactersApi, setCharactersApi] = useState<Character[] | null>(null);
-
+ 
   const getCharactersApi = async () => {
 	const data = await getCharacters();
 	if (data) {
 	  setCharactersApi(data.characters);
 	}
   };
+  
   
   useEffect(() => {
 	getCharactersApi();
@@ -27,10 +27,7 @@ function HomePage() {
 			alt={character.name}
 		  />
 		  <span>{character.name}</span>
-		  <span>{character.personal.sex}</span>
-		  <span>{character.personal.birthdate}</span>
-		  <span>{character.personal.affiliation}</span>
-		  <span>{character.personal.clan}</span>
+		  <span>{character.personal?.sex}</span>
 		</article>
 	  ))}
 	</>
