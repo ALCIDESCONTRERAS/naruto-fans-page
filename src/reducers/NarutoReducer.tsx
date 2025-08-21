@@ -16,6 +16,7 @@ export type InitialStateType = {
   tailedBeasts: TailedBeast[];
   kekkeiGenkais: KekkeiGenkai[];
   teams: Team[];
+  sidebar: boolean;
 };
 
 export type ActionType =
@@ -25,7 +26,8 @@ export type ActionType =
   | { type: "add_clan"; payload: Clan[] }
   | { type: "add_tailed_beast"; payload: TailedBeast[] }
   | { type: "add_kekkei_genkai"; payload: KekkeiGenkai[] }
-  | { type: "add_team"; payload: Team[] };
+  | { type: "add_team"; payload: Team[] }
+  | { type: "show_sidebar"; payload: boolean};
 
 export const initialState: InitialStateType = {
   loading: false,
@@ -37,6 +39,7 @@ export const initialState: InitialStateType = {
   tailedBeasts: [],
   kekkeiGenkais: [],
   teams: [],
+  sidebar: false,
 };
 
 export const narutoReducer = (state: InitialStateType, action: ActionType) => {
@@ -75,6 +78,11 @@ export const narutoReducer = (state: InitialStateType, action: ActionType) => {
       return {
         ...state,
         teams: action.payload,
+      };
+    case "show_sidebar":
+      return {
+        ...state,
+        sidebar: action.payload,
       };
     default:
       return state;

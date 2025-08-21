@@ -10,6 +10,8 @@ import type { ClanResponse } from "../interfaces/Clan.interface";
 import type { TeamResponse } from "../interfaces/Team.interface";
 import type { TailedBeastResponse } from "../interfaces/TailedBeast";
 import type { KekkeiGenkaiResponse } from "../interfaces/KekkeiGenkai.interface";
+import Footer from "../components/public/Footer.component";
+import Sidebar from "../components/public/Sidebar.component";
 
 export const RootLayout = () => {
 	const { dispatch } = useNaruto();
@@ -35,6 +37,8 @@ export const RootLayout = () => {
   return (
 	<div>
 		<Outlet />
+		<Sidebar />
+		<Footer />
 	</div>
   )
 }
