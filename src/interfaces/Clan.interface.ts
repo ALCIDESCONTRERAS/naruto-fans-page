@@ -1,6 +1,7 @@
 export interface Clan {
   id: number;
   name: string;
+  type: "clan";
   characters: number[];
 }
 

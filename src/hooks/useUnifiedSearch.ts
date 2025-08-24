@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-type Searchable = { name: string; id: number };
+type Searchable = { name: string; id: number; type: string };
 
 export function useUnifiedSearch<T extends Searchable>(lists: T[][]) {
   const [query, setQuery] = useState("");

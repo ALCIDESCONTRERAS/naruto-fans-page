@@ -1,6 +1,7 @@
 export interface Village {
   id: number;
   name: string;
+  type: "village";
   characters: number[];
 }
 

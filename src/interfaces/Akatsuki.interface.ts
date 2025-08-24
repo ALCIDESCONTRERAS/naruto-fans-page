@@ -2,6 +2,7 @@ export interface Akatsuki {
   id: number;
   name: string;
   images: string[];
+  type: "akatsuki";
   debut?: {
     manga?: string;
     anime?: string;

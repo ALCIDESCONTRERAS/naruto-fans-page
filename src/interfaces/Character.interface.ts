@@ -1,6 +1,7 @@
 export interface Character {
   id: number;
   name: string;
+  type: "character"
   images: string[];
   debut?: {
     manga?: string;

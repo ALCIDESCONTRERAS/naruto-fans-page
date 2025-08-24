@@ -2,6 +2,7 @@ export interface TailedBeast {
   id: number;
   name: string;
   images: string[];
+  type: "tailed-beast";
   debut?: {
     manga?: string;
     anime?: string;
