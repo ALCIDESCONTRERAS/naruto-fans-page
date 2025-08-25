@@ -11,5 +11,5 @@ function SidebarButton() {
       <Menu className="h-9 w-9"/>
     </button>
   );
-}
+};
 export default SidebarButton;
