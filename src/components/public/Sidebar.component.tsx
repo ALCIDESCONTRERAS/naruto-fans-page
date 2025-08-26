@@ -27,7 +27,7 @@ export default function Sidebar() {
           <div
             id="drawer-navigation"
             className={`fixed top-0 left-0 z-40 w-full md:w-64 h-screen p-4 overflow-y-auto transition-transform
-          bg-gray-800
+          bg-[url(https://imgs.search.brave.com/Mb3wTRkiq87SmLXitHXdv3pITVbYzqEQRD4qwAzssDU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93MC5w/ZWFrcHguY29tL3dh/bGxwYXBlci8yMjAv/NzA4L0hELXdhbGxw/YXBlci1wYWluLXBh/aW4tcmlubmVnYW4t/dGh1bWJuYWlsLmpw/Zw)]
           ${state.sidebar ? "translate-x-0" : "-translate-x-full"}`}
           >
             <h5
