@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 export default function WelcomeText() {
   return (
-    <div className="absolute md:top-1/2 top-4 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 text-gray-700 space-y-16 px-4 md:px-0">
+    <div className="absolute md:top-1/2 top-4 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 text-gray-700 space-y-4 lg:space-y-16 px-4 md:px-0">
       <h1 className="text-3xl md:text-8xl text-center font-bold font-title">
         Welcome to the Naruto universe
       </h1>

@@ -4,16 +4,11 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="h-8 me-3"
-                alt="FlowBite Logo"
-              />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                Flowbite
-              </span>
-            </a>
+            <img
+              src="https://imgs.search.brave.com/Yp9ieaF5bH8lK3HdfN28_rSnDqtw-B5MNJVeaStq0ks/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZnJlZXBuZ2xvZ29z/LmNvbS91cGxvYWRz/L25hcnV0by90aGUt/ZW5kLW5hcnV0by1u/ZWFyLWVuc2lucy1n/YW1pbmctY29tbXVu/aXR5LTI0LnBuZw"
+              className="h-15 me-3"
+              alt="Naruto logo"
+            />
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -21,11 +16,6 @@ export default function Footer() {
                 Resources
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    Flowbite
-                  </a>
-                </li>
                 <li>
                   <a
                     href="https://tailwindcss.com/"
@@ -43,7 +33,7 @@ export default function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://github.com/ALCIDESCONTRERAS"
                     className="hover:underline "
                   >
                     Github
@@ -54,7 +44,7 @@ export default function Footer() {
                     href="https://discord.gg/4eeurUVvTy"
                     className="hover:underline"
                   >
-                    Discord
+                    LinkedIn
                   </a>
                 </li>
               </ul>
@@ -81,9 +71,9 @@ export default function Footer() {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © 2025{" "}
             <a href="https://flowbite.com/" className="hover:underline">
-              Flowbite™
+              Alcides Contreras
             </a>
             . All Rights Reserved.
           </span>

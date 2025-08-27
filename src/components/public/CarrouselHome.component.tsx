@@ -80,19 +80,19 @@ export default function CarrouselHome() {
   };
 
   return (
-    <article className="w-full h-dvh relative overflow-hidden bg-[url(https://preview.redd.it/pv1n441bvf781.jpg?width=1080&crop=smart&auto=webp&s=2f0d9868985fcede5af6bc984ec71f59a71fccfb)]">
+    <article className="w-full h-66 md:h-[70vh] lg:h-[100vh] relative flex justify-center items-center overflow-hidden bg-[url(https://preview.redd.it/pv1n441bvf781.jpg?width=1080&crop=smart&auto=webp&s=2f0d9868985fcede5af6bc984ec71f59a71fccfb)]">
       {carrouselList.map(({ description, img, title, to }, index) => (
         <div
           key={index}
-          className={`absolute transition-opacity duration-800 ease-in-out left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  ${
+          className={`absolute transition-opacity duration-800 ease-in-out ${
             current === index ? "opacity-90" : "opacity-0 pointer-events-none"
           }`}
         >
-          <Link to={to} className="group">
+          <Link to={to} className="group w-full h-66 md:h-[70vh] lg:h-auto relative">
             <img
               src={img}
               alt={title}
-              className="object-cover w-full h-[31rem]"
+              className="md:w-full lg:w-[56rem] lg:h-auto object-center md:object-contain lg:object-cover"
             />
             <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 " />
             <div className="absolute text-gray-200 bottom-0 px-4 opacity-0 group-hover:opacity-100 -translate-y-8 transition-all duration-400 space-y-4">
@@ -106,15 +106,15 @@ export default function CarrouselHome() {
           </Link>
           <button
             onClick={handlePrevImage}
-            className="absolute -left-16 top-1/2 bg-white/50 text-gray-700 px-3 py-1 rounded-full animate-bounce "
+            className="absolute top-1/2 lg:-left-14.5 bg-white/50 text-gray-700 px-3 py-1 rounded-full animate-bounce "
           >
-            <ArrowLeft className="h-8 w-8" />
+            <ArrowLeft className="md:h-8 md:w-8" />
           </button>
           <button
             onClick={handleNextImage}
-            className="absolute top-1/2 -right-16 bg-white/50 text-gray-700 px-3 py-1 rounded-full animate-bounce"
+            className="absolute top-1/2 right-0 lg:-right-14.5 bg-white/50 text-gray-700 px-3 py-1 rounded-full animate-bounce"
           >
-            <ArrowRight className="h-8 w-8" />
+            <ArrowRight className="w-5 h-5 md:h-8 md:w-8" />
           </button>
         </div>
       ))}
