@@ -11,6 +11,7 @@ import { LoginPage } from "./pages/Auth/Login.page";
 import { RegisterPage } from "./pages/Auth/Register.page";
 import { ProfilePage } from "./pages/admin/Profile.page";
 import HomePage from "./pages/Public/Home.page";
+import Characters from "./pages/naruto/Characters.page";
 
 function AppRoutes() {
   return (
@@ -32,6 +33,7 @@ function AppRoutes() {
         <Route path="admin" element={<AdminLayout />}>
           <Route index element={<DashboardPage />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="characters" element={<Characters />} />
         </Route>
       </Route>
     </Routes>

@@ -12,10 +12,32 @@ import {
   UserPlus,
   Users,
   X,
+  type LucideIcon,
 } from "lucide-react";
+
+interface sidebarItemsType {
+  to: string;
+  label: string;
+  icon: LucideIcon;
+}
 
 export default function Sidebar() {
   const { state, dispatch } = useNaruto();
+
+  const sidebarItems: sidebarItemsType[] = [
+    { to: "/", label: "Home", icon: House },
+    { to: "/admin/profile", label: "Profile", icon: UserPen },
+    { to: "/admin/characters", label: "Characters", icon: Users },
+    { to: "/", label: "Akaksukis", icon: Users },
+    { to: "/", label: "Villages", icon: Map },
+    { to: "/", label: "Tailed Beast", icon: Aperture },
+    { to: "/", label: "Teams", icon: UserPlus },
+    { to: "/", label: "Kekkei Genkai", icon: Star },
+    { to: "/", label: "Clans", icon: ShieldUser },
+    { to: "/login", label: "Sign In", icon: LogIn },
+    { to: "/register", label: "Sign Up", icon: SquareUser },
+  ];
+
   return (
     <>
       {state.sidebar && (
@@ -48,121 +70,19 @@ export default function Sidebar() {
               onClick={() => dispatch({ type: "show_sidebar", payload: false })}
             >
               <ul className="space-y-2 font-medium font-title">
-                <li>
-                  <Link
-                    to="/"
-                    className="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group"
-                  >
-                    <House className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">Home</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={"/admin/profile"}
-                    className="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group"
-                  >
-                    <UserPen className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">
-                      Profile
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <Users className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">
-                      Characters
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <Users className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">
-                      Akatsukis
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <Map className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">
-                      Villages
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <Aperture className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">
-                      Tailed Beasts
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <UserPlus className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">Teams</span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <Star className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">
-                      Kekkei Genkai
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <ShieldUser className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">Clans</span>
-                  </a>
-                </li>
-                <li>
-                  <Link
-                    to="/login"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <LogIn className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">
-                      Sign In
-                    </span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/register"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                    <SquareUser className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
-                    <span className="flex-1 ms-3 whitespace-nowrap">
-                      Sign Up
-                    </span>
-                  </Link>
-                </li>
+                {sidebarItems.map(({ icon: Icon, label, to }, i) => (
+                  <li key={i}>
+                    <Link
+                      to={to}
+                      className="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group"
+                    >
+                      <Icon className="w-5 h-5 transition duration-75 text-gray-400 group-hover:text-white" />
+                      <span className="flex-1 ms-3 whitespace-nowrap">
+                        {label}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

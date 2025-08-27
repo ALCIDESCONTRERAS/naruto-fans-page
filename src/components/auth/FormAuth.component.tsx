@@ -12,6 +12,7 @@ interface Props {
   formFields: Field[];
   formType: string;
 }
+
 export default function FormAuth({ formFields, formType }: Props) {
   return (
     <form className="space-y-6">
