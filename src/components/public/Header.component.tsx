@@ -4,7 +4,7 @@ import Search from "./Search.component";
 
 export default function Header() {
   return (
-    <header className="md:mx-8 relative flex flex-col md:flex-row p-4 md:justify-between items-center">
+    <header className="md:px-8 relative flex flex-col md:flex-row p-4 md:justify-between items-center bg-gray-800">
       <div className="flex md:gap-2 md:justify-start justify-center w-full md:w-auto">
         <div className="absolute left-0 top-1/2 -translate-y-10 md:static md:translate-y-5">
           <SidebarButton />
