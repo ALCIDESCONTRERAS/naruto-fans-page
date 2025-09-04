@@ -2,19 +2,19 @@ import CardChar from "../../components/catalog/CardChar.component";
 import { useNaruto } from "../../hooks/useNaruto";
 import { usePagination } from "../../hooks/usePagination";
 
-export default function Characters() {
+export default function AkatsukiPage() {
   const { state } = useNaruto();
   const { currentItems, currentPage, setCurrentPage, totalPages } =
-    usePagination(state.characters, 21);
+    usePagination(state.akatsukis, 21);
 
   return (
-    <main className="bg-[url(https://wallpapers.com/images/high/naruto-manga-ejwj7fzcl0a5hp5b.webp)]">
+    <main className="bg-[url(https://imgs.search.brave.com/SPTyBuJ2C0Acgr_zcs_0w4gzRl3EwTKTBqqlAwcJIt4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDQ5ODA0/NDguanBn)] bg-white/50 bg-blend-overlay bg-contain">
       <h1 className="py-8 text-orange-400 text-4xl md:text-6xl lg:text-7xl text-center font-bold font-title">
-        Characters
+        Akatsukis
       </h1>
       <section className="grid mx-auto xl:w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6">
-        {currentItems.map((char) => (
-          <CardChar key={char.id} item={char} />
+        {currentItems.map((a) => (
+          <CardChar key={a.id} item={a} />
         ))}
       </section>
       <aside className="py-12 text-center">

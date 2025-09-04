@@ -12,6 +12,9 @@ import { RegisterPage } from "./pages/Auth/Register.page";
 import { ProfilePage } from "./pages/admin/Profile.page";
 import HomePage from "./pages/Public/Home.page";
 import Characters from "./pages/naruto/Characters.page";
+import AkatsukiPage from "./pages/naruto/Akatsuki.page";
+import TailedBeastPage from "./pages/naruto/TailedBeasts.page";
+import VillagePage from "./pages/naruto/Village.page";
 
 function AppRoutes() {
   return (
@@ -34,6 +37,9 @@ function AppRoutes() {
           <Route index element={<DashboardPage />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="characters" element={<Characters />} />
+          <Route path="akatsukis" element={<AkatsukiPage />} />
+          <Route path="tailed-beasts" element={<TailedBeastPage />} />
+          <Route path="villages" element={<VillagePage />} />
         </Route>
       </Route>
     </Routes>
